@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock title %}</title>
+  <meta name="description" lang="en" content="conference24">
+  <meta name="keywords" lang="en" content="ocnference24">
+  <meta name="resource-type" content="document">
+  <meta name="copyright" content="Content © 2024 ?">
+  <meta name="author" content="?">
+  <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/flat.css">
+  <link href="/fonts/awesome/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="big-head">
+    <div class="big-title">
+      <h1 class="title">EWGCFM & MMEI 2024</h1>
+      <p class="subtitle">
+        Euro Working Group for Commodity and Financial Modelling<br>
+        Mathematical Methods in Economy and Industry
+      </p>
+    </div>
+    <img id="img-head" src="/images/top.jpg" alt="foto" width="100%">
+    <!--<div class="top-info">
+      <strong>Assessing and Controlling<br>Financial, Industrial, and General Risk</strong><br>
+      28.-30. October 2024, Prague<br>
+      <a href="mailto:conference24@utia.cas.cz">conference24@utia.cas.cz</a>
+    </div>-->
+    <nav class="nav-head">
+      {% include "_nav.html" %}
+    </nav>
+  </div>
+  <div class="nav-mobile">
+    {% include "_nav-mobile.html" %}
+  </div>
+
+  {% block content %} {% endblock %}
+
+  <div class="big-foot">
+    <p>design by PH &copy; 2024</p>
+</body>
+
+</html>

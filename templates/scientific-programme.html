@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+<body>
+  {% block content %}
+  <section>
+    <div class="section-content">
+      <h1>{{ section.title }}</h1>
+      <div>
+        {{ section.content | safe }}
+      </div>
+      <div class="content">
+        {% for page in section.pages %}
+        <div class="article" style="display: inline-block;">
+          <div class="header">
+            <h2>{{ page.title }}</h2>
+          </div>
+          <div class="article-content">
+            {{ page.content | safe }}
+            <!--<a href="{{ page.permalink | safe }}" class="button">&rightarrow; více</a>-->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endblock content %}
+</body>

@@ -1,0 +1,269 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+$grid: 10px;
+$f-size: 21px;
+
+$blue: #2068a0;
+$deep-blue: #164468;
+
+// nav active //
+
+// headings //
+
+h1 {
+  font-size: 2 * $f-size;
+}
+h2 {
+  font-size: 1.6 * $f-size;
+}
+h3 {
+  font-size: 1.4 * $f-size;
+}
+h4 {
+  font-size: 1.2 * $f-size;
+}
+h5 {
+  font-size: $f-size;
+}
+h6 {
+  font-size: 1 * $f-size;
+}
+
+h1 {
+  margin: $grid * 3 0;
+  font-weight: 500;
+}
+
+h1 {
+  color: #2068a0;
+}
+
+h2 {
+  margin: $grid*3 0 $grid*2 0;
+  break-after: avoid-column;
+}
+
+h3 {
+  margin: 2 * $grid 0;
+}
+
+html {
+  //background-color: #202428;
+  background-color: $blue;
+}
+
+body {
+  background-color: #fff;
+  max-width: 1200px;
+  font-family: "STIX Two Text";
+  font-size: $f-size;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#big-head {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  //background-color: #264;
+}
+
+#img-head {
+  margin: 0;
+}
+
+.big-title {
+  /*padding: $grid*2;
+  background-color: rgba(32, 36, 40, 0.5);*/
+  margin: 4 * $grid 0;
+  position: absolute;
+  top: 0;
+  //top: $grid * 4;
+  right: $grid * 4;
+  .title {
+    margin: 0;
+    font-size: 2.5 * $f-size;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 4px 4px 8px #333;
+  }
+  .subtitle {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    line-height: 1.5;
+  }
+}
+
+.big-foot {
+  width: 100%;
+  padding: $grid $grid*2;
+  color: #ccc;
+  background-color: #101214;
+  text-align: center;
+  font-size: $f-size*0.65;
+}
+
+.top-info {
+  color: #fff;
+  font-size: 1.35;
+  text-align: right;
+  text-shadow: 2px 2px 4px #000;
+  line-height: 1.5;
+  position: absolute;
+  right: $grid*4;
+  bottom: $grid*8;
+}
+
+.nav-head {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 0 $grid;
+  background-color: rgba(0, 0, 0, 0.65);
+  a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: $grid * 2 $grid * 2 $grid * 1.6 $grid * 2;
+    &:hover {
+      color: #fdc;
+      background-color: rgb(32, 36, 40);
+    }
+  }
+}
+
+.preamble {
+  margin: $grid * 4;
+  //padding: $grid*2;
+  //background-color: $blue;
+  //color: $blue;
+  border-radius: 5px;
+  //box-shadow: 6px 6px 8px #ccc;
+  font-size: $f-size * 1.35;
+  text-align: center;
+}
+
+.section-content {
+  margin: $grid * 4;
+  margin-bottom: 0;
+  padding-bottom: $grid * 4;
+  //column-count: 3;
+  column-gap: $grid*2;
+  /*p {
+    display: inline-block;
+  }*/
+  h2:first-of-type, h1:first-of-type {
+    margin-top: 0 !important;
+  }
+  ul {
+    margin: $grid*2 $grid*4;
+    list-style-type: square;
+  }
+  table {
+    margin: $grid*2 0;
+  }
+}
+
+.article-content {
+  p {
+    margin-bottom: $grid;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .nav-mobile {
+    display: none;
+  }
+  .section-content {
+    column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .nav-head {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .nav-mobile {
+    margin-top: -10px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    a {
+      display: inline-block;
+      margin: $grid;
+    }
+  }
+  .section-content {
+    column-count: 2;
+  }
+  .big-title {
+    margin: $grid;
+    .title {
+      text-align: left;
+      margin: 0;
+      font-size: 2 * $f-size;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 4px 4px 8px #333;
+    }
+    .subtitle {
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #big-head, #img-head {
+    position: static;
+  }
+  .section-content {
+    column-count: 1;
+    margin: $grid;
+    margin-bottom: 0;
+    padding-bottom: $grid;
+  }
+  .big-title {
+    background-color: $blue;
+    position: static;
+    margin: 0;
+    padding: $grid;
+    .title {
+      text-align: left;
+      margin: 0;
+      font-size: 1.5 * $f-size;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 4px 4px 8px #333;
+    }
+    .subtitle {
+      color: #fff;
+      text-shadow: 2px 2px 4px #000;
+      line-height: 1.5;
+      text-align: left;
+    }
+  }
+  .nav-head {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .nav-mobile {
+    margin-top: -10px;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    a {
+      display: inline-block;
+      margin: $grid;
+    }
+  }
+}

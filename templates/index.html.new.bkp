@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+<body>
+<div id="big-head">
+  <h1 id="h-head">Conference24</h1>
+  <img id="img-head" src="/images/mikulas.jpg" alt="foto" width="100%">
+</div>
+<nav class="nav-head">
+  {% include "_nav.html" %}
+</nav>
+<section class="section-content">
+  <h1>{{ section.title }}</h1>
+  <div>
+    {{ section.content | safe }}
+  </div>
+  <div class="content">
+    {% for page in section.pages %}
+    <div class="article">
+      <h2>{{ page.title }}</h2>      
+      <div class="article-content">
+        {{ page.content | safe }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

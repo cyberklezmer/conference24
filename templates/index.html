@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+<!--<body>-->
+  {% block content %}
+  <div class="preamble">
+    <p>
+      <strong>Managing Financial, Economic, and Global Risk</strong><br>
+      28.-30. October 2024, Prague<br>
+      conference24@utia.cas.cz
+    </p>
+  </div>
+  <section class="section-content">
+    <!--<h1>{{ section.title }}</h1>-->
+    <div>
+      {{ section.content | safe }}
+    </div>
+    <div class="content">
+      {% for page in section.pages %}
+      <article class="article">
+        <header>
+          <div class="article">{{ page.title }}</div>
+        </header>
+        <div class="article-content">
+          {{ page.content | safe }}
+          <a href="{{ page.permalink | safe }}" class="button">&rightarrow; více</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endblock content %}
+<!--</body>-->
