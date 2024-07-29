@@ -4,16 +4,25 @@
         <loc>https://conference24.utia.cz/</loc>
     </url>
     <url>
-        <loc>https://conference24.utia.cz/abstracts-and-registration/</loc>
+        <loc>https://conference24.utia.cz/abstracts-submition/</loc>
     </url>
     <url>
-        <loc>https://conference24.utia.cz/abstracts-and-registration/dates/</loc>
+        <loc>https://conference24.utia.cz/abstracts-submition/dates/</loc>
     </url>
     <url>
-        <loc>https://conference24.utia.cz/abstracts-and-registration/fees/</loc>
+        <loc>https://conference24.utia.cz/abstracts-submition/fees/</loc>
     </url>
     <url>
         <loc>https://conference24.utia.cz/home/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/registration/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/registration/dates/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/registration/fees/</loc>
     </url>
     <url>
         <loc>https://conference24.utia.cz/scientific-programme/</loc>
@@ -29,6 +38,15 @@
     </url>
     <url>
         <loc>https://conference24.utia.cz/social-programme/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/social-programme/concert/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/social-programme/dinner/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/social-programme/excursion/</loc>
     </url>
     <url>
         <loc>https://conference24.utia.cz/venue-and-travel-info/</loc>

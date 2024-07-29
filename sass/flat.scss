@@ -15,19 +15,19 @@ h1 {
   font-size: 2 * $f-size;
 }
 h2 {
-  font-size: 1.6 * $f-size;
+  font-size: 1.25 * $f-size;
 }
 h3 {
-  font-size: 1.4 * $f-size;
+  font-size: 1.2 * $f-size;
 }
 h4 {
-  font-size: 1.2 * $f-size;
+  font-size: $f-size;
 }
 h5 {
   font-size: $f-size;
 }
 h6 {
-  font-size: 1 * $f-size;
+  font-size: $f-size;
 }
 
 h1 {
@@ -41,11 +41,14 @@ h1 {
 
 h2 {
   margin: $grid*3 0 $grid*2 0;
-  break-after: avoid-column;
+  //break-after: avoid-column;
+  font-weight: 700;
+  break-after: avoid;
 }
 
 h3 {
   margin: 2 * $grid 0;
+  font-weight: 700;
 }
 
 html {
@@ -151,12 +154,15 @@ body {
   margin-bottom: 0;
   padding-bottom: $grid * 4;
   //column-count: 3;
-  column-gap: $grid*2;
+  column-gap: $grid*4;
   /*p {
     display: inline-block;
   }*/
   h2:first-of-type, h1:first-of-type {
     margin-top: 0 !important;
+  }
+  div {
+    margin-bottom: $grid*2;
   }
   ul {
     margin: $grid*2 $grid*4;
@@ -167,9 +173,42 @@ body {
   }
 }
 
+.article {
+  margin: 0;
+  p:last-of-type {
+    margin-bottom: $grid*4;
+  }
+  img {
+    display: block;
+    margin: $grid auto;
+    max-width: 100%;
+  }
+}
+
 .article-content {
   p {
     margin-bottom: $grid;
+    //break-inside: avoid-column;
+  }
+}
+
+.profile-photo {
+  margin: $grid*2 0 $grid 0 !important;
+  width: 60px;
+  //height: 60px;
+}
+
+.page {
+  margin: $grid*4 auto;
+  max-width: 720px;
+  .page-title {
+    margin: 0 $grid*4;
+  }
+  .page-content {
+    margin: 0 $grid*4;
+  }
+  ul {
+    margin: $grid*2 $grid*4;
   }
 }
 
@@ -179,6 +218,9 @@ body {
   }
   .section-content {
     column-count: 3;
+  }
+  .abstracts .section-content {
+    column-count: 2 !important;
   }
 }
 

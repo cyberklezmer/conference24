@@ -15,7 +15,8 @@
             <h2>{{ page.title }}</h2>
           </div>
           <div class="article-content">
-            {{ page.content | safe }}
+            {{ page.summary | safe }}
+            <!--{{ page.content | safe }}-->
             <!--<a href="{{ page.permalink | safe }}" class="button">&rightarrow; více</a>-->
           </div>
         </div>

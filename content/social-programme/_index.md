@@ -1,9 +1,8 @@
 +++
 title = "Social Programme"
 sort_by = "weight"
-template = "section.html"
+template = "registration.html"
 page_template = "page.html"
 +++
 
-
-The social programme includes a Conference Dinner, commented excorsions a hopefully a concert, held on the first day. 
+The social programme includes a Conference Dinner, commented excorsions and a concert, held on the first day. 

@@ -23,7 +23,9 @@ Founded in September 1986 in Lisbon by Jaap Spronk, the EWGCFM focuses on financ
 
 Founded by František Nožicka and started in 1973, the International Conferences on Mathematical Methods in Economy and Industry (MMEI) are organized on a rotating basis by the Czech Republic, Germany, and Slovakia. The series features a productive mix of experienced keynote speakers and emerging young talents.
 
+## Special issue to be announced
 
+_Coming soon_
 
 ## Scientific Commitee
 
@@ -41,4 +43,4 @@ Founded by František Nožicka and started in 1973, the International Conference
 ## Local Organizing Commitee
 
 **Martin Branda**\
-**Martin Šmíd**
+[**Martin Šmíd**](mailto:cyberklezmer@gmail.com)

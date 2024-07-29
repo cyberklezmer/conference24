@@ -16,8 +16,7 @@ weight = 10
 15:50	&ndash;	17:10	: Contributed talks\
 17:10	&ndash;	17:20	: Coffee break\
 17:20	&ndash;	17:50	: Plenary lecture\
-			
-			
+						
 20:00	&ndash;	21:00	: Chamber music concert\
 			
 **29. October (Tuesday)**			
@@ -48,3 +47,5 @@ weight = 10
 11:45	&ndash;	11:55	: Coffee break\
 11:55	&ndash;	13:15	: Jaap Spronk reward talk\
 13:15	&ndash;	14:15	: Closing
+
+<!-- more -->
