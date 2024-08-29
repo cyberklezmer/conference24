@@ -7,18 +7,17 @@ weight = 20
 
 **Miloš Kopa**
 
-_Charles University in Prague_
+_Charles University in Prague, Faculty of Mahtematics and Physics_
 
 <img src="/images/miguel-carion.jpg" class="profile-photo">
 
 **Miguel Carrion**
 
-_University of Castilla-La Mancha
-PhD_
+_University of Castilla-La Mancha_
 
 <img src="/images/ales-cerny-2.jpg" class="profile-photo">
 
-**Aleě Černý**
+**Aleš Černý**
 
 _Bayes Business School, Faculty of Finance_
 

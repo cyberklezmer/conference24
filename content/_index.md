@@ -19,13 +19,13 @@ We welcome contributions from the following areas, possibly but not necessarily 
 
 Founded in September 1986 in Lisbon by Jaap Spronk, the EWGCFM focuses on financial models for decision-makers in finance and commodities. It provides a forum for information exchange, encourages research, and links financial theory with practice. With over 450 members and semi-annual meetings, it has become a well-established platform for scientific collaboration.
 
-## 22nd eddition of Mathematical Methods in Economy and Industry
+## 22nd edition of Mathematical Methods in Economy and Industry
 
 Founded by František Nožicka and started in 1973, the International Conferences on Mathematical Methods in Economy and Industry (MMEI) are organized on a rotating basis by the Czech Republic, Germany, and Slovakia. The series features a productive mix of experienced keynote speakers and emerging young talents.
 
-## Special issue to be announced
+## Publication Opportunity
 
-_Coming soon_
+The Central European Journal of Operations Research will publish a special issue on the conference topic. 
 
 ## Scientific Commitee
 
@@ -37,7 +37,7 @@ _Coming soon_
 **Alois Pichler**, _TU, Chemnitz_\
 **Anoop Rai**, _Hofstra University, New York_\
 **Martin Šmíd**, _Czech Academy of Sciences_\
-**Karen Watkins**, _Universidad Internacional de La Rioja, Grenada_
+**Karen Watkins**, _Universidad Internacional de La Rioja, Spain_
 
 
 ## Local Organizing Commitee

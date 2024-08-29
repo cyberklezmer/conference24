@@ -16,6 +16,9 @@
         <loc>https://conference24.utia.cz/home/</loc>
     </url>
     <url>
+        <loc>https://conference24.utia.cz/info/</loc>
+    </url>
+    <url>
         <loc>https://conference24.utia.cz/registration/</loc>
     </url>
     <url>
@@ -35,6 +38,9 @@
     </url>
     <url>
         <loc>https://conference24.utia.cz/scientific-programme/jaap-spronk-prize/</loc>
+    </url>
+    <url>
+        <loc>https://conference24.utia.cz/scientific-programme/special-issue/</loc>
     </url>
     <url>
         <loc>https://conference24.utia.cz/social-programme/</loc>

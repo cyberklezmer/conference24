@@ -42,7 +42,7 @@ To apply or nominate someone for the award, please submit your complete research
 
 **September 30th, 2024**: Submission deadline (Full papers only)
 
-**October 24th, 2024**: Assignment of the Award during the 70th EWGCFM Meeting in Prague
+**October 30th, 2024**: Assignment of the Award during the 70th EWGCFM Meeting in Prague
 
 ### Award Ceremony
 

@@ -5,4 +5,4 @@ template = "registration.html"
 page_template = "page.html"
 +++
 
-**Not open yet.**
+**Coming soon.**
