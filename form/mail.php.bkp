@@ -1,0 +1,143 @@
+<?php
+/*
+try {
+    require_once "connection.php";
+    $conn = new mysqli($host, $username, $password, $database);
+}catch (Exception $e){
+    die( $e->getMessage());
+}
+
+
+try {
+    $result = $conn->query("SELECT * FROM registration WHERE id=$id");
+    $result =  $result->fetch_assoc();
+}catch (Exception $e){
+    die( $e->getMessage());
+}
+
+$message = "
+<html>
+<head>
+    <style>
+    body
+    {
+        width: 700px;
+        height: auto;
+    }
+    h3
+    {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align:center;
+    }
+   .message
+    {
+        width: 500px;
+        height: auto;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sign
+    {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+    }
+
+    </style>
+    </head>  <body>";
+
+$card = " 
+<h3><a href='https://conference24.utia.cas.cz' target='utia'>EWGCFM & MMEI 2024</a></h3>
+<div class = 'message'>
+
+<p>".date("d.m.Y")."</p><p>";
+$card.= $result['name']."<br />";
+$card.= $result['affilia']."<br />";
+$card.= $result['email']."<br />
+</p><p>&nbsp;</p><p>Dear ";
+$card.= $result['name'].",
+</p><p>&nbsp;</p><p>
+Subject: Acknowledgment of Abstract Submission
+</p><p>&nbsp;</p><p>
+We are pleased to acknowledge the receipt of your abstract submission for the EWGCFM & MMEI 2024 conference, scheduled to take place on October 28-30, 2024. We are committed to providing you with a notification of acceptance or rejection by September 16.
+</p><p>&nbsp;</p><p>
+Should you have any questions or require further information in the meantime, please do not hesitate to contact our team at conference24@utia.cas.cz. We appreciate your patience during this review period and look forward to potentially welcoming you to Prague.
+</p><p>&nbsp;</p><p>
+Thank you once again for your submission.
+</p><p>&nbsp;</p><p>
+</div>
+<div class = 'sign'>
+Yours sincerely,
+</p><p>&nbsp;</p><p>
+Martin Šmíd  <br />
+Organizing Committee <br />
+conference24@utia.cas.cz 
+</div>";
+
+
+$trans = "podekuj dva";
+
+if( $result['pay_method'] == 'card'){
+$message= $card.$message;        
+echo "<div class='comgate_mess'>$card</div>";
+}else{
+$message= $trans.$message;        
+echo "<div class='comgate_mess'>$trans</div>";
+}
+$message.= "</body></html>";
+*/
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    $mail->CharSet = 'UTF-8';
+    //Server settings
+//    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'hermes.utia.cas.cz';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = false;                                   //Enable SMTP authentication
+    $mail->Username   = 'user@example.com';                     //SMTP username
+    $mail->Password   = 'secret';                               //SMTP password
+//    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you h
+
+    //Recipients
+    /*$mail->setFrom('vanicekp@utia.cas.cz', 'Mailer');
+    $mail->addAddress('vanicekp@utia.cas.cz', 'Joe User');     //Add a recipient
+    $mail->addReplyTo('info@example.com', 'Information');
+*/
+    $mail->setFrom('conferece24@utia.cas.cz', 'conference24');
+    $mail->addAddress( $result['email'], $result['name']);     //Add a recipient
+    $mail->addReplyTo('conferece24@utia.cas.cz', 'Information');
+
+    //Attachments
+
+    //Content
+    /*$mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+*/
+
+$mail->isHTML(true);                                  //Set email format to HTML
+$mail->Subject = 'EWGCFM & MMEI 2024 registration';
+$mail->Body    = $message;
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+//    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+

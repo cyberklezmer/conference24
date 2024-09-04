@@ -44,3 +44,5 @@ The Central European Journal of Operations Research will publish a special issue
 
 **Martin Branda**\
 [**Martin Šmíd**](mailto:cyberklezmer@gmail.com)
+
+

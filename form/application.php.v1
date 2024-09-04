@@ -1,0 +1,62 @@
+<?php include("./head.html");?>
+
+
+<form id="myform" name="myform" onsubmit="subform(); return false;">
+  <table>
+    <tr>
+      <td>
+      <label for="name">Your name:</label> 
+      </td>
+      <td> 
+      <input type="text" id="name" name="name" size="80" maxlength="150" value="">
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <label for="mail">Your e-mail:</label> 
+      </td>
+      <td>            
+      <input type="email" id="mail" name="mail" size="50" maxlength="50" value="">
+      </td>      
+    </tr>
+    <tr>
+      <td colspan=2 style="text-align:center">
+      <input type="submit">  
+      </td>      
+</tr>
+  </table>
+</form>
+<div id="t"></div>
+
+<?php include("./foot.html");?>
+<script>
+function subform(){
+  if(  $("#myform").valid()){
+    $.ajax({
+      url: "./saveapplic.php",
+      method: "POST",
+      data: $("#myform").serialize(),
+      error: function (request, status, error) {
+          alert(request.responseText);
+      },
+      success: function (data){
+         $("#t").text( data);
+      }
+		})
+  }
+}
+
+$("#myform").ready(function(){
+   $("#myform").validate({
+      errorElement: 'div',
+      rules: {
+        name: {
+					required: true,
+        },
+	    	mail:	{
+					validate_email: true
+				}
+		  }
+   });
+})
+</script>
